@@ -17,7 +17,7 @@ Authenticated Liveperson challenge
   
   function identityFn(callback) {
       callback({
-          iss: "https://jarakkal.github.io/liveperson/authenticated.html",
+          iss: "https://jarakkal.github.io",
           acr: "loa1",
           sub: "16723672"
       });
@@ -25,7 +25,7 @@ Authenticated Liveperson challenge
     lpTag.identities.push(identityFn);
   function LPJsMethodName(callback) {
     console.log('Authentication token requested by Liveperson');
-    const id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkcC5saXZlcGVyc29uLm5ldCIsImFjciI6ImxvYTEiLCJzdWIiOiIxNjcyMzY3MiIsImF1ZCI6ImFjYzpxYTU3MjIxNjc2IiwiZXhwIjoxNjM0MjU5MjcxLCJpYXQiOjE1MTYyMzkwMjIsImdpdmVuX25hbWUiOiJFaXRhbiJ9.OQfE7R6JMFkE8cTC1Y-kTADV9uYSBvGxe-c0mnwsVu6pLB_MEdb19wirRq3WRNvXaD0Zfg2TIJw7LZh4NBT2V_myhXR_wACyt2XYmALjHH9QXdItBR9reBH6IVivLEY2uA1kPS56MoMlZjlK4xY3nabgBCJt0K1m5eHQbEA4yjOTuGtZ6Kbs13SVnoPsekDqjV3JJkATgbB6QFf5C73XuBJjpzx4PUZ7Dc0irPD1Is1bXEaaDW6mXddPmiil4z7H02Ea6jRr9Crgjw7WFaLjAgKany7bq0SBNnsMByOv6nFvFp0FNK6frxLAzlglPW6_0TkU1UoKgQoz5NAIuNJ-Wg";
+    const id_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2phcmFra2FsLmdpdGh1Yi5pbyIsImFjciI6ImxvYTEiLCJzdWIiOiIxNjcyMzY3MiIsImF1ZCI6ImFjYzpxYTU3MjIxNjc2IiwiZXhwIjoxNjM0MjU5MjcxLCJpYXQiOjE1MTYyMzkwMjIsImdpdmVuX25hbWUiOiJFaXRhbiJ9.2ogAsH8sIOHhA5lCdsW8Wiix59bg_ftW2j39Id0WMU8";
     callback(id_token);            
   }
   </script>
