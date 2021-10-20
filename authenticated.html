@@ -23,6 +23,33 @@ Authenticated Liveperson challenge
       });
   } 
     lpTag.identities.push(identityFn);
+    var data = [{
+  "type": "cart", //MANDATORY
+  "total": 11.7, //TOTAL CART VALUE
+  "currency": "USD", //CURRENCY CODE
+  "numItems": 6, //NUMBER OF ITEMS IN CART
+  "products": [{ //ARRAY OF PRODUCTS
+    "product": {
+    "name": "prod1", //PRODUCT NAME
+    "category": "category", //PRODUCT CATEGORY NAME
+    "sku": "sku", //PRODUCT SKU OR UNIQUE IDENTIFIER
+    "price": 7.8 //PRODUCT PRICE
+    }, "quantity": 1 //NUMBER OF PRODUCTS
+  }]
+},{
+   "type": "prodView", //MANDATORY
+   "products": [{ //ARRAY OF PRODUCTS
+     "product": {
+       "name": "Authenticated Liveperson challenge", //Page title
+       "category": "shoes", //PRODUCT CATEGORY NAME
+       "sku": "10305020", //PRODUCT SKU OR UNIQUE IDENTIFIER
+       "price": 119.95 //PRODUCT PRICE
+     }
+   }]
+ }]
+ 
+var fun = function() {};
+lpTag.sdes.send(data, fun);
   function LPJsMethodName(callback) {
     console.log('Authentication token requested by Liveperson');
     const id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2phcmFra2FsLmdpdGh1Yi5pbyIsImFjciI6ImxvYTEiLCJzdWIiOiIxNjcyMzY3MiIsIm5hbWUiOiJKb2huIERvZSIsImFkbWluIjp0cnVlLCJpYXQiOjE0NDYxMTE3NTIsImV4cCI6MTYzNjk1MzY0NywicHJlZmVycmVkX3VzZXJuYW1lIjoiSm9obkRvZSIsInBob25lX251bWJlciI6IisxLTEwLTM0NC0zNzY1MzMzIn0.m4A9ZbW1F9Y693_nLnvgCfuRKzOM7HYHzmH0DNXRIm4Cx5o5KDz4eoo6pYbuwwTVJq5a5jHx15Qan4bMF0kULOThk6gsN7q06055-cfJxZhMKrKV3cxgpxr2OY5dkWByoIdGeIOqCzo51jLbWFrKWBuFF7TB_WZcx1zdaDjbV5suTQRmZY3TQIAZFeLPeXyotZ4YaD7rH9Ddhz9LJf2qVgehvuFQK8p_u1-qZr2LSva5kOM5AkWpIDommddlC2AT40v6WpzkpX8Xe98ibVvB4NBm-_vS2lcLrNQwHOXdUYcyDv2NPdBsT9McoSBZkGnnlQid3tB84NW48_5o0DEA8Q";
