@@ -23,6 +23,8 @@ Authenticated Liveperson challenge
       });
   } 
     lpTag.identities.push(identityFn);
+    
+lpTag.sdes = lpTag.sdes||[];
     var data = [{
   "type": "cart", //MANDATORY
   "total": 11.7, //TOTAL CART VALUE
