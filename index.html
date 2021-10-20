@@ -9,5 +9,36 @@ Unauthenticated Liveperson challenge
 </head>
 <body>
 Liveperson challenge
+  <script>
+    window.lpTag = window.lpTag || {};
+lpTag.sdes = lpTag.sdes||[];
+    var data = [{
+  "type": "cart", //MANDATORY
+  "total": 11.7, //TOTAL CART VALUE
+  "currency": "USD", //CURRENCY CODE
+  "numItems": 6, //NUMBER OF ITEMS IN CART
+  "products": [{ //ARRAY OF PRODUCTS
+    "product": {
+    "name": "prod1", //PRODUCT NAME
+    "category": "category", //PRODUCT CATEGORY NAME
+    "sku": "sku", //PRODUCT SKU OR UNIQUE IDENTIFIER
+    "price": 7.8 //PRODUCT PRICE
+    }, "quantity": 1 //NUMBER OF PRODUCTS
+  }]
+},{
+   "type": "prodView", //MANDATORY
+   "products": [{ //ARRAY OF PRODUCTS
+     "product": {
+       "name": "Unauthenticated Liveperson challenge", //Page title
+       "category": "shoes", //PRODUCT CATEGORY NAME
+       "sku": "10305020", //PRODUCT SKU OR UNIQUE IDENTIFIER
+       "price": 119.95 //PRODUCT PRICE
+     }
+   }]
+ }]
+ 
+var fun = function() {};
+lpTag.sdes.send(data, fun);
+  </script>
 </body>
 </html>
