@@ -48,7 +48,17 @@ lpTag.sdes.send(data, fun);
         "type": "searchInfo",  //MANDATORY
         "keywords": ["Batman"],  //TERMS SEARCHED BY A VISITOR. FOR EXAMPLE: FAQ ABOUT RESET PASSWORD
    }
+      
 );
+   lpTag.sdes.push( {
+  "type": "service", //MANDATORY
+  "service": {
+    "topic": "Batman", // SERVICE ACTIVITY TOPIC OR NAME
+    "status": 0, // STATUS ENUM
+    "category": "movie", // SERVICE CATEGORY NAME
+    "serviceId": "service12" // SERVICE UNIQUE IDENTIFIER OR TICKET ID
+  }
+});
   </script>
 </body>
 </html>
