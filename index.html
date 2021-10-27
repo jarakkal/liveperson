@@ -38,7 +38,11 @@ lpTag.sdes = lpTag.sdes||[];
  }]
  
 var fun = function() {};
+    try{
 lpTag.sdes.send(data, fun);
+    } catch(e) {
+      lpTag.sdes.push(data);
+    }
   </script>
 </body>
 </html>
